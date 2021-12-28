@@ -1,0 +1,103 @@
+COMPANY;TICKER;SEGMENT;SUBSEGMENT
+Activision Blizzard;ATVI;Communication Services;Interactive Home Entertainment
+Adobe;ADBE;Information Technology;Application Software
+Advanced Micro Devices;AMD;Information Technology;Semiconductors
+Align Technology;ALGN;Health Care;Health Care Supplies
+Alphabet (Class A);GOOGL;Communication Services;Interactive Media & Services
+Alphabet (Class C);GOOG;Communication Services;Interactive Media & Services
+Amazon.com;AMZN;Consumer Discretionary;Internet & Direct Marketing Retail
+American Electric Power;AEP;Utilities;Electric Utilities
+Amgen;AMGN;Health Care;Biotechnology
+Analog Devices;ADI;Information Technology;Semiconductors
+Ansys;ANSS;Information Technology;Application Software
+Apple;AAPL;Information Technology;Technology Hardware, Storage & Peripherals
+Applied Materials;AMAT;Information Technology;Semiconductor Equipment
+ASML Holding;ASML;Information Technology;Semiconductor Equipment
+Atlassian;TEAM;Information Technology;Application Software
+Autodesk;ADSK;Information Technology;Application Software
+Automatic Data Processing;ADP;Information Technology;Data Processing & Outsourced Services
+Baidu;BIDU;Communication Services;Interactive Media & Services
+Biogen;BIIB;Health Care;Biotechnology
+Booking Holdings;BKNG;Consumer Discretionary;Internet & Direct Marketing Retail
+Broadcom;AVGO;Information Technology;Semiconductors
+Cadence Design Systems;CDNS;Information Technology;Application Software
+CDW;CDW;Information Technology;Technology Distributors
+Cerner;CERN;Health Care;Health Care Technology
+Charter Communications;CHTR;Communication Services;Cable & Satellite
+Check Point;CHKP;Information Technology;Application Software
+Cintas;CTAS;Industrials;Diversified Support Services
+Cisco Systems;CSCO;Information Technology;Communications Equipment
+Cognizant;CTSH;Information Technology;IT Consulting & Other Services
+Comcast;CMCSA;Communication Services;Cable & Satellite
+Copart;CPRT;Industrials;Diversified Support Services
+Costco;COST;Consumer Staples;Hypermarkets & Super Centers
+CrowdStrike;CRWD;Information Technology;Application Software
+CSX Corporation;CSX;Industrials;Railroads
+DexCom;DXCM;Health Care;Health Care Equipment
+DocuSign;DOCU;Information Technology;Application Software
+Dollar Tree;DLTR;Consumer Discretionary;General Merchandise Stores
+eBay;EBAY;Consumer Discretionary;Internet & Direct Marketing Retail
+Electronic Arts;EA;Communication Services;Interactive Home Entertainment
+Exelon;EXC;Utilities;Multi-Utilities
+Fastenal;FAST;Industrials;Building Products
+Fiserv;FISV;Information Technology;Data Processing & Outsourced Services
+Fox Corporation (Class A);FOXA;Communication Services;Movies & Entertainment
+Fox Corporation (Class B);FOX;Communication Services;Movies & Entertainment
+Gilead Sciences;GILD;Health Care;Biotechnology
+Honeywell;HON;Industrials;Industrial Conglomerates
+Idexx Laboratories;IDXX;Health Care;Health Care Equipment
+Illumina;ILMN;Health Care;Life Sciences Tools & Services
+Incyte;INCY;Health Care;Biotechnology
+Intel;INTC;Information Technology;Semiconductors
+Intuit;INTU;Information Technology;Application Software
+Intuitive Surgical;ISRG;Health Care;Health Care Equipment
+JD.com;JD;Consumer Discretionary;Internet & Direct Marketing Retail
+Keurig Dr Pepper;KDP;Consumer Staples;Soft Drinks
+KLA Corporation;KLAC;Information Technology;Semiconductor Equipment
+Kraft Heinz;KHC;Consumer Staples;Packaged Foods & Meats
+Lam Research;LRCX;Information Technology;Semiconductor Equipment
+Lululemon Athletica;LULU;Consumer Discretionary;Apparel, Accessories & Luxury Goods
+Marriott International;MAR;Consumer Discretionary;Hotels, Resorts & Cruise Lines
+Marvell Technology;MRVL;Information Technology;Application Software
+Match Group;MTCH;Communication Services;Interactive Media & Services
+MercadoLibre;MELI;Consumer Discretionary;Internet & Direct Marketing Retail
+Meta Platforms;FB;Communication Services;Interactive Media & Services
+Microchip Technology;MCHP;Information Technology;Semiconductors
+Micron Technology;MU;Information Technology;Semiconductors
+Microsoft;MSFT;Information Technology;Systems Software
+Moderna;MRNA;Health Care;Biotechnology
+Mondelēz International;MDLZ;Consumer Staples;Packaged Foods & Meats
+Monster Beverage;MNST;Consumer Staples;Soft Drinks
+NetEase;NTES;Communication Services;Interactive Home Entertainment
+Netflix;NFLX;Communication Services;Movies & Entertainment
+Nvidia;NVDA;Information Technology;Semiconductors
+NXP Semiconductors;NXPI;Information Technology;Semiconductors
+O'Reilly Automotive;ORLY;Consumer Discretionary;Specialty Stores
+Okta;OKTA;Information Technology;Application Software
+Paccar;PCAR;Industrials;Construction Machinery & Heavy Trucks
+Paychex;PAYX;Information Technology;Data Processing & Outsourced Services
+PayPal;PYPL;Information Technology;Data Processing & Outsourced Services
+Peloton Interactive;PTON;Consumer Discretionary;Leisure Products
+PepsiCo;PEP;Consumer Staples;Soft Drinks
+Pinduoduo;PDD;Consumer Discretionary;Internet & Direct Marketing Retail
+Qualcomm;QCOM;Information Technology;Semiconductors
+Regeneron Pharmaceuticals;REGN;Health Care;Biotechnology
+Ross Stores;ROST;Consumer Discretionary;Apparel Retail
+Seagen;SGEN;Health Care;Biotechnology
+Sirius XM;SIRI;Communication Services;Broadcasting
+Skyworks Solutions;SWKS;Information Technology;Semiconductors
+Splunk;SPLK;Information Technology;Application Software
+Starbucks;SBUX;Consumer Discretionary;Restaurants
+Synopsys;SNPS;Information Technology;Application Software
+T-Mobile US;TMUS;Communication Services;Wireless Telecommunication Services
+Tesla;TSLA;Consumer Discretionary;Automobile Manufacturers
+Texas Instruments;TXN;Information Technology;Semiconductors
+Trip.com Group;TCOM;Consumer Discretionary;Internet & Direct Marketing Retail
+Verisign;VRSN;Information Technology;Internet Services & Infrastructure
+Verisk Analytics;VRSK;Industrials;Research & Consulting Services
+Vertex Pharmaceuticals;VRTX;Health Care;Biotechnology
+Walgreens Boots Alliance;WBA;Consumer Staples;Drug Retail
+Workday;WDAY;Information Technology;Application Software
+Xcel Energy;XEL;Utilities;Multi-Utilities
+Xilinx;XLNX;Information Technology;Semiconductors
+Zoom Video Communications;ZM;Information Technology;Application Software
