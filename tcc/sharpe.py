@@ -7,7 +7,6 @@ import statistics
 
 import profit
 
-
 """
 O valor retornado (Índice Sharpe) diz que para cada 1 ponto de risco
 o ativo retornou X de percentual se comparado com um ativo livre
@@ -17,6 +16,8 @@ para o possível retorno. Se o valor é próximo de 1 então vale a pena
 ter um ativo livre de risco também, acima de 2 pode-se dizer que começa
 a valer a pena correr o risco.
 """
+
+
 def calculate_sharpe(values, market_index):
 	daily_profit = profit.calculate_daily(values)
 
@@ -38,6 +39,6 @@ def calculate_sharpe(values, market_index):
 
 	print('sharpe', sharpe)
 
-	print('initial investment', values[0], ' return', values[len(values)-1] - values[0])
+	print('initial investment', values[0], ' return', values[len(values) - 1] - values[0])
 
 	return sharpe

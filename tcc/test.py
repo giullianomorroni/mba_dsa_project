@@ -6,9 +6,15 @@ from os import listdir
 from os.path import isfile
 import pickle
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import adfuller
 from tcc import sharpe
+
+
+# d = pd.read_csv('../data_original/tickers/data/Tickers_Ibovespa_Full.csv', delimiter=';')
+# for data in d.iterrows():
+#     print(data)
 
 
 # files = listdir('../info_money/data/')
@@ -43,11 +49,11 @@ from tcc import sharpe
 #     selic = 9
 #     sharpe.calculate_sharpe(close_values, market_index=selic)
 
-t = []
-v = 10
-for x in range(0, 100):
-    t.append(v)
-    v += 1
-
-print(t)
-sharpe.calculate_sharpe(t, 10)
+# t = []
+# v = 10
+# for x in range(0, 100):
+#     t.append(v)
+#     v += 1
+#
+# print(t)
+# sharpe.calculate_sharpe(t, 10)
