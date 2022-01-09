@@ -5,6 +5,7 @@
 from os import listdir
 from os.path import isfile
 import pickle
+import trend
 
 headers = {}
 
@@ -36,6 +37,10 @@ for file in files:
         max_values.append((data[key]['max'], key))
         volume_values.append((data[key]['volume'], key))
 
+    # less than two years
+    if len(close_values) < 500:
+        continue
+
     aux_close_moving_avg = []
     for close, date in close_values:
         aux_close_moving_avg.append(close)
@@ -45,6 +50,10 @@ for file in files:
         data[date]['moving_average'] = moving_avg
 
         aux_close_moving_avg = aux_close_moving_avg[1:]
+
+    uptrend, trend_result = trend.calculate_trend(aux_close_moving_avg, 20, 4)
+    data['is_up_trend'] = uptrend
+    data['trend_calculated_values'] = trend_result
 
     modificated_file = modificated_dir + file
     handler = open(modificated_file, 'wb')
