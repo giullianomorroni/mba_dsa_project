@@ -39,6 +39,6 @@ def calculate_sharpe(values, market_index):
 
 	print('sharpe', sharpe)
 
-	print('initial investment', values[0], ' return', values[len(values) - 1] - values[0])
+	print('initial investment', values[0][0], ' return', values[len(values) - 1][0] - values[0][0])
 
-	return sharpe
+	return sharpe, yearly_volatility, accumulated_profitability

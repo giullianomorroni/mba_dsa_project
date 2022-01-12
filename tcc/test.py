@@ -11,6 +11,19 @@ import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import adfuller
 from tcc import sharpe
 
+dir_acoes = '../data_original/acoes/'
+
+files = listdir(dir_acoes)
+
+for file in files:
+    paper = file
+    print(paper)
+    file = dir_acoes + file
+    file_handler = open(file, 'rb')
+    data = pickle.load(file_handler)
+    print(data)
+    file_handler.close()
+    break
 
 # d = pd.read_csv('../data_original/tickers/data/Tickers_Ibovespa_Full.csv', delimiter=';')
 # for data in d.iterrows():

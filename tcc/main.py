@@ -1,21 +1,24 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# encoding=utf8
+# #!/usr/bin/env python
+# # -*- coding: utf-8 -*-
+# # encoding=utf8
 
 from os import listdir
 from os.path import isfile
 import pickle
 import trend
+import profit
+import sharpe
 
 headers = {}
 
-original_dir = '../data_original/info_money/data/'
-modificated_dir = '../info_money/data/'
+acoes_dir = '../data_original/acoes/'
 
-files = listdir(original_dir)
+files = listdir(acoes_dir)
+
+market_idx_reference = 7.0
 
 for file in files:
-    original_file = original_dir + file
+    original_file = acoes_dir + file
     if not isfile(original_file) or 'DS_Store' in file:
         continue
 
@@ -23,39 +26,43 @@ for file in files:
     data = pickle.load(file_handler)
     file_handler.close()
 
-    close_values = []
-    min_values = []
-    max_values = []
-    volume_values = []
-
     keys = list(data.keys())
     keys.reverse()
 
+    close_values = []
+    prices_ = data['prices']
     for key in keys:
-        close_values.append((data[key]['close'], key))
-        min_values.append((data[key]['min'], key))
-        max_values.append((data[key]['max'], key))
-        volume_values.append((data[key]['volume'], key))
+        close_values.append((prices_[key]['close'], key))
 
     # less than two years
-    if len(close_values) < 500:
+    data['less_than_2_yrs'] = False
+    if len(close_values) < 450:
+        data['less_than_2_yrs'] = True
         continue
 
-    aux_close_moving_avg = []
+    aux = []
+    moving_avg = []
     for close, date in close_values:
-        aux_close_moving_avg.append(close)
-        if len(aux_close_moving_avg) < 20:
+        aux.append(close)
+        if len(aux) < 20:
             continue
-        moving_avg = sum(aux_close_moving_avg)/20
-        data[date]['moving_average'] = moving_avg
+        result = sum(aux)/20
+        moving_avg.append(result)
+        data['prices'][date]['moving_average'] = result
+        #move uma cada para frente
+        aux = aux[1:]
 
-        aux_close_moving_avg = aux_close_moving_avg[1:]
-
-    uptrend, trend_result = trend.calculate_trend(aux_close_moving_avg, 20, 4)
+    uptrend, trend_result = trend.calculate_trend(moving_avg, 20, 4)
     data['is_up_trend'] = uptrend
     data['trend_calculated_values'] = trend_result
 
-    modificated_file = modificated_dir + file
+    #profit.calculate_profitability()
+    sharpe, yearly_volatility, accumulated_profitability = sharpe.calculate_sharpe(close_values, market_idx_reference)
+    data['sharpe'] = sharpe
+    data['yearly_volatility'] = yearly_volatility
+    data['accumulated_profitability'] = accumulated_profitability
+
+    modificated_file = acoes_dir + file
     handler = open(modificated_file, 'wb')
     pickle.dump(data, handler)
     handler.close()
