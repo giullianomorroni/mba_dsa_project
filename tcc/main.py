@@ -15,7 +15,9 @@ acoes_dir = '../data_original/acoes/'
 
 files = listdir(acoes_dir)
 
-market_idx_reference = 7.0
+selic_2019 = 4.5
+selic_2020 = 2.0
+market_idx_reference = selic_2019 + selic_2020 / 2
 
 for file in files:
     original_file = acoes_dir + file
@@ -26,11 +28,11 @@ for file in files:
     data = pickle.load(file_handler)
     file_handler.close()
 
-    keys = list(data.keys())
-    keys.reverse()
-
     close_values = []
+
     prices_ = data['prices']
+    keys = list(prices_.keys())
+    keys.reverse()
     for key in keys:
         close_values.append((prices_[key]['close'], key))
 
@@ -57,10 +59,10 @@ for file in files:
     data['trend_calculated_values'] = trend_result
 
     #profit.calculate_profitability()
-    sharpe, yearly_volatility, accumulated_profitability = sharpe.calculate_sharpe(close_values, market_idx_reference)
-    data['sharpe'] = sharpe
-    data['yearly_volatility'] = yearly_volatility
-    data['accumulated_profitability'] = accumulated_profitability
+    _sharpe, _yearly_volatility, _accumulated_profitability = sharpe.calculate_sharpe(close_values, market_idx_reference)
+    data['sharpe'] = _sharpe
+    data['yearly_volatility'] = _yearly_volatility
+    data['accumulated_profitability'] = _accumulated_profitability
 
     modificated_file = acoes_dir + file
     handler = open(modificated_file, 'wb')
