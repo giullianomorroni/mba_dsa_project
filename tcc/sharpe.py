@@ -17,6 +17,8 @@ ter um ativo livre de risco também, acima de 2 pode-se dizer que começa
 a valer a pena correr o risco.
 """
 
+import profit
+
 
 def calculate_sharpe(values, market_index):
 	daily_profit = profit.calculate_daily(values)

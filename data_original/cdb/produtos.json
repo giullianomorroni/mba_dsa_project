@@ -1,0 +1,42 @@
+[
+  {
+    "name": "CDB Banco A",
+    "maturity": 1825,
+    "index": "IPCA",
+    "rentability": 4.0,
+    "rentability_type": "post_fixed",
+    "tax": 15
+  },
+  {
+    "name": "CDB Banco A",
+    "maturity": 1825,
+    "index": "CDI",
+    "rentability": 180,
+    "rentability_type": "post_fixed",
+    "tax": 15
+  },
+  {
+    "name": "CDB Banco A",
+    "maturity": 1095,
+    "index": "CDI",
+    "rentability": 120,
+    "rentability_type": "post_fixed",
+    "tax": 15
+  },
+  {
+    "name": "CDB Banco B",
+    "maturity": 1095,
+    "index": null,
+    "rentability": 9,
+    "rentability_type": "pre_fixed",
+    "tax": 15
+  },
+  {
+    "name": "CDB Banco B",
+    "maturity": 1825,
+    "index": null,
+    "rentability": 13,
+    "rentability_type": "pre_fixed",
+    "tax": 15
+  }
+]
