@@ -9,25 +9,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import adfuller
 
-files = listdir('../info_money/data/')
+files = listdir('../data_original/acoes/')
 
 for file in files:
     paper = file
-    file = '../info_money/data/' + file
+    file = '../data_original/acoes/' + file
+
     if not isfile(file) or 'DS_Store' in file:
         continue
+
     file_handler = open(file, 'rb')
     data = pickle.load(file_handler)
     file_handler.close()
 
-    keys = list(data.keys())
+    keys = list(data['prices'].keys())
     keys.reverse()
 
     moving_average_values = []
     close_values = []
 
     for key in keys:
-        value = data[key]
+        value = data['prices'][key]
 
         if 'moving_average' not in value:
             moving_average_values.append(value['close'])
@@ -37,13 +39,12 @@ for file in files:
         moving_average_values.append(value['moving_average'])
         close_values.append(value['close'])
 
-    # Estacionariedade: propriedades estatísticas não mudam ao longo do tempo
-    # Exemplo: média, variância, autocorrelação
-    # Ruido: tem uma média constante, uma variância constante e não há estrutura
-    # de autocorrelação
-    # Autocorrelação (ADF) é um cálculo da correlação das observações da série temporal
-    # com valores da mesma série, mas em tempos anteriores. Os períodos anteriores
-    # são chamados de lags.
+    # Estacionariedade: propriedades estatísticas não mudam ao longo do tempo Exemplo: média, variância, autocorrelação
+    #
+    # Ruido: tem uma média constante, uma variância constante e não há estrutura de autocorrelação
+    #
+    # Autocorrelação (ADF) é um cálculo da correlação das observações da série temporal com valores da mesma série, mas em tempos anteriores. Os períodos anteriores são chamados de lags.
+    #
     stationary = adfuller(close_values)
     if stationary[0] < -5:
         print('Ação Estacionária', ' p-value:', stationary[1], ' test result:', stationary[0])
@@ -76,16 +77,6 @@ for file in files:
 # imutável e associado a algum aspecto do calendário, o padrão é sazonal.
 # Em geral, a duração média dos ciclos é maior do que a duração de um padrão
 # sazonal.
-
-
-
-
-
-
-
-# Teste de Dickey-Fuller: avaliação estacionariedade da série
-# Expectativa que o teste seja significativo para rejeitar hipótese
-
 
 # Teste Ljung–Box: determina se algum grupo de autocorrelações de uma série
 # temporal é diferente de zero. Em outras palavras, avaliar se as séries de

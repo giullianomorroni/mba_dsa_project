@@ -193,6 +193,11 @@ def sharpe_calc():
 		data['less_than_2_yrs'] = False
 		if data['timeframe']['last_24_months']['profitability'] is None:
 			data['less_than_2_yrs'] = True
+			modification_file: str = _dir + file
+			handler = open(modification_file, 'wb')
+			pickle.dump(data, handler)
+			handler.close()
+			continue
 
 		accumulated_profitability = data['timeframe']['last_24_months']['profitability']
 		yearly_volatility = data['timeframe']['last_24_months']['volatility']
